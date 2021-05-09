@@ -18,3 +18,7 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('/anagram','ExampleController@anagramTest');
+
+$router->get('/{apiKey}/{search}/{sort}','MovieController@searchWithSortMovie');
+$router->get('/{apiKey}/{search}','MovieController@searchMovie');
+$router->get('/{apiKey}','MovieController@allMovie');
