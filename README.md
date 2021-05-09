@@ -9,9 +9,6 @@
 ## Anagram Test
 ![alt text](https://lh3.googleusercontent.com/d/18mlqWSQ5cw3gtCbvQSw6OVZNlj66xl-l)
 Link: <http://localhost:8000/anagram>
-<<<<<<< HEAD
-
-<!-- https://lh3.googleusercontent.com/d/18mlqWSQ5cw3gtCbvQSw6OVZNlj66xl-l -->
 
 ## REST API Test
 
@@ -22,7 +19,5 @@ Link: <http://localhost:8000/anagram>
 Link: <http://localhost:8000/Rey311/nihil?page=2>
 
 ### Search and Sort
-![Search](/pic/search_and_sort.png)
+![Search and Sort](/pic/seach_and_sort.png)
 Link: <http://localhost:8000/Rey311/nihil/asc>
-=======
->>>>>>> af43b524502e0b64293485dcec41dc99e052a139
