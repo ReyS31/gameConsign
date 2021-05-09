@@ -24,10 +24,9 @@ class ExampleController extends Controller
         //
     }
 
-
     public function anagramTest()
     {
-        
+
         $defArr = ['kita', 'atik', 'tika', 'aku', 'kia', 'makan', 'kua'];
         $asciiArr = array();
 
@@ -46,7 +45,7 @@ class ExampleController extends Controller
 
         // Get Keys
         $sorted = array_keys($asciiArr);
-        
+
         $tempArr = array();
 
         $finalArr = array();
@@ -62,7 +61,7 @@ class ExampleController extends Controller
             // Get first value from temporary array
             $firstTemp = reset($tempArr);
 
-            // If both ASCII values arent same 
+            // If both ASCII values arent same
             if ($asciiArr[$sorted[$i]] != $asciiArr[$firstTemp]) {
                 array_push($finalArr, $tempArr);
                 $tempArr = [];
@@ -74,24 +73,9 @@ class ExampleController extends Controller
 
             // If same ASCII values
             if ($asciiArr[$sorted[$i]] == $asciiArr[$firstTemp]) {
-                $stringLen = strlen($sorted[$i]);
-                $sameLen = 0;
-                for ($j = 0; $j < $stringLen; $j++) {
-                    if (is_numeric(strpos($sorted[$i], $firstTemp[$j]))) {
-                        $sameLen++;
-                    }
-
-                }
-
-                // If string lenght same as same char length
-                if ($stringLen == $sameLen) {
-                    array_push($tempArr, $sorted[$i]);
-                } else {
-                    array_push($tempArr, $sorted[$i]);
-                    array_push($finalArr, $tempArr);
-                    $tempArr = [];
-                }
+                array_push($tempArr, $sorted[$i]);
             }
+
         }
         rsort($finalArr);
         return json_encode($finalArr);
