@@ -14,10 +14,6 @@ class MovieSeeder extends Seeder
      */
     public function run()
     {
-        // User::factory()
-        //     ->count(50)
-        //     ->hasPosts(1)
-        //     ->create();
         Movie::factory()
             ->count(300)
             ->create();
